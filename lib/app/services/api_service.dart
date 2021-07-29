@@ -8,7 +8,7 @@ class APIService {
   final API api;
 
   Future<String> getAccessToken() async {
-    var url = Uri.parse(api.tokenUri().toString())
+    var url = Uri.parse(api.tokenUri().toString());
     final response = await http.post(
       url,
       headers: {'Authorization': 'Basic ${api.apiKey}'},
